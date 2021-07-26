@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdidelot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 16:09:33 by fdidelot          #+#    #+#             */
-/*   Updated: 2014/11/28 15:02:49 by fdidelot         ###   ########.fr       */
+/*   Updated: 2021/07/26 18:47:53 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int	ft_atoi(const char *str)
 	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v'
 		|| *str == '\r' || *str == '\f')
 		str++;
-	sign = (*str == '-' ? -1 : 1);
+	if (*str == '-')
+		sign = -1;
 	if (*str == '-' || *str == '+')
 		str++;
 	while (*str && ft_isdigit(*str))

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdidelot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/12 16:03:12 by fdidelot          #+#    #+#             */
-/*   Updated: 2014/11/20 16:12:14 by fdidelot         ###   ########.fr       */
+/*   Updated: 2021/07/26 18:53:02 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	char	*s1;
 	char	*s2;
 
-	s1 = (char*)dst;
-	s2 = (char*)src;
+	s1 = (char *)dst;
+	s2 = (char *)src;
 	while (n > 0)
 	{
 		*s1 = *s2;

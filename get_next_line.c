@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abassibe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/23 13:49:33 by abassibe          #+#    #+#             */
-/*   Updated: 2017/10/03 06:15:32 by fdidelot         ###   ########.fr       */
+/*   Updated: 2021/07/26 19:36:46 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ static t_buff	*crea_lst(t_buff **buff, int fd, int chk)
 {
 	t_buff		*new;
 
-	if (!(new = malloc(sizeof(t_buff))))
+	new = malloc(sizeof(t_buff));
+	if (!new)
 		return (NULL);
 	new->fd = fd;
 	new->ind = -1;
@@ -47,7 +48,7 @@ static t_buff	*check_buff(t_buff **cpy, int fd)
 	return (NULL);
 }
 
-static int		clean_buff(t_buff *cpy, char **line, int fd)
+static int	clean_buff(t_buff *cpy, char **line, int fd)
 {
 	int		i;
 
@@ -70,19 +71,20 @@ static int		clean_buff(t_buff *cpy, char **line, int fd)
 	return (read_file(cpy, line, fd));
 }
 
-int				read_file(t_buff *cpy, char **line, int fd)
+int	read_file(t_buff *cpy, char **line, int fd)
 {
 	int				i;
 	int				ret;
 
 	i = 0;
-	ret = 0;
-	while ((ret = read(fd, cpy->buff, BUFF_SIZE)) > 0)
+	ret = read(fd, cpy->buff, BUFF_SIZE);
+	while (ret > 0)
 	{
 		cpy->buff[ret] = '\0';
 		if (ft_strchr(cpy->buff, '\n') != NULL)
 			return (clean_buff(cpy, line, fd));
 		*line = ft_strjoin(*line, cpy->buff);
+		read(fd, cpy->buff, BUFF_SIZE);
 	}
 	if (ret == -1)
 		return (-1);
@@ -93,7 +95,7 @@ int				read_file(t_buff *cpy, char **line, int fd)
 	return (1);
 }
 
-int				get_next_line(const int fd, char **line)
+int	get_next_line(const int fd, char **line)
 {
 	static t_buff	*buff;
 	t_buff			*cpy;

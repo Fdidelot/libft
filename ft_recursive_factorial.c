@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maviot <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/07 09:27:37 by maviot            #+#    #+#             */
-/*   Updated: 2016/12/07 10:19:37 by maviot           ###   ########.fr       */
+/*   Updated: 2021/07/26 18:55:50 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_recursive_factorial(int nb)
+int	ft_recursive_factorial(int nb)
 {
 	if (nb == 1 || nb == 0)
 		return (1);

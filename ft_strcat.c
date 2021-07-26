@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdidelot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 16:05:23 by fdidelot          #+#    #+#             */
-/*   Updated: 2014/11/24 17:09:04 by fdidelot         ###   ########.fr       */
+/*   Updated: 2021/07/26 18:56:06 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int i;
+	int	i;
 
 	i = ft_strlen(s1);
 	while (*s2)

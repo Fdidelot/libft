@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdidelot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/16 03:12:26 by fdidelot          #+#    #+#             */
-/*   Updated: 2017/03/16 03:13:00 by fdidelot         ###   ########.fr       */
+/*   Updated: 2021/07/26 19:01:08 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strjoin_free(char const *s1, char const *s2, int k)
 
 	if (!s1 || !s2)
 		return (NULL);
-	if (!(join = ft_memalloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
+	join = ft_memalloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!join)
 		return (NULL);
 	i = -1;
 	j = 0;

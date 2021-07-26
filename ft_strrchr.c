@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdidelot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 17:52:58 by fdidelot          #+#    #+#             */
-/*   Updated: 2014/11/26 15:56:10 by fdidelot         ###   ########.fr       */
+/*   Updated: 2021/07/26 19:06:55 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ char	*ft_strrchr(const char *s, int c)
 		i--;
 	}
 	if (s[i] == c)
-		return ((char*)&s[i]);
+		return ((char *)&s[i]);
 	return (NULL);
 }

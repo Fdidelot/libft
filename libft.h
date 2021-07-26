@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdidelot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 15:43:49 by fdidelot          #+#    #+#             */
-/*   Updated: 2017/10/19 03:45:37 by fdidelot         ###   ########.fr       */
+/*   Updated: 2021/07/26 19:11:14 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <sys/uio.h>
 # include "get_next_line.h"
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	size_t			content_size;
@@ -69,7 +69,7 @@ char				*ft_strstr(const char *s1, const char *s2);
 char				*ft_strnstr(const char *s1, const char *s2, size_t n);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
 char				*ft_strsub_free(const char *s,
-									unsigned int start, size_t len);
+						unsigned int start, size_t len);
 char				*ft_strjoin(const char *s1, const char *s2);
 char				*ft_strjoin_free(const char *s1, const char *s2, int i);
 char				*ft_strtrim(const char *s);

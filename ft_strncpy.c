@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdidelot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 15:39:24 by fdidelot          #+#    #+#             */
-/*   Updated: 2014/11/26 15:28:56 by fdidelot         ###   ########.fr       */
+/*   Updated: 2021/07/26 19:04:00 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (src[i] && i < n)

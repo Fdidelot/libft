@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdidelot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/22 18:39:57 by fdidelot          #+#    #+#             */
-/*   Updated: 2016/12/22 19:00:39 by fdidelot         ###   ########.fr       */
+/*   Updated: 2021/07/26 18:53:38 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list *map;
-	t_list *new;
-	t_list *tmp;
+	t_list	*map;
+	t_list	*new;
+	t_list	*tmp;
 
 	if (lst == NULL || f == NULL)
 		return (NULL);
@@ -25,7 +25,8 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	lst = lst->next;
 	while (lst)
 	{
-		if (!(new = f(lst)))
+		new = f(lst);
+		if (!new)
 			return (NULL);
 		tmp->next = new;
 		tmp = new;

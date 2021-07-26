@@ -14,7 +14,7 @@
 
 size_t	ft_count_occur(char *str, char c)
 {
-	int i;
+	int	i;
 	int	j;
 
 	i = 0;

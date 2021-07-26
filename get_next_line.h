@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abassibe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/23 13:50:58 by abassibe          #+#    #+#             */
-/*   Updated: 2017/05/17 23:50:36 by abassibe         ###   ########.fr       */
+/*   Updated: 2021/07/26 19:10:46 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "libft.h"
 # define BUFF_SIZE 50
 
-typedef struct		s_buff
+typedef struct s_buff
 {
 	int				fd;
 	int				ind;

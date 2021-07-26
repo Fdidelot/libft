@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa2.c                                         :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdidelot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/20 15:04:19 by fdidelot          #+#    #+#             */
-/*   Updated: 2014/11/20 17:11:38 by fdidelot         ###   ########.fr       */
+/*   Updated: 2021/07/26 18:48:55 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		ft_length(int n, size_t *len)
+static void	ft_length(int n, size_t *len)
 {
 	*len = 1;
 	if (n > 0)
@@ -27,7 +27,7 @@ static void		ft_length(int n, size_t *len)
 	}
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	size_t	len;
 	size_t	i;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdidelot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/13 18:02:59 by fdidelot          #+#    #+#             */
-/*   Updated: 2014/11/13 18:05:48 by fdidelot         ###   ########.fr       */
+/*   Updated: 2021/07/26 18:56:49 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_strdel(char **as)
 {
-	ft_memdel((void**)as);
+	ft_memdel((void **)as);
 }

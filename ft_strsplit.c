@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdidelot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdidelot <fdidelot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/19 16:42:54 by fdidelot          #+#    #+#             */
-/*   Updated: 2014/11/28 15:05:45 by fdidelot         ###   ########.fr       */
+/*   Updated: 2021/07/26 19:07:31 by fdidelot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static size_t	ft_nb_word(char const *s, char c)
 	return (nb);
 }
 
-static char		*add_word(size_t *i, char const *s, char c)
+static char	*add_word(size_t *i, char const *s, char c)
 {
 	size_t	size;
 	size_t	j;
@@ -58,7 +58,7 @@ static char		*add_word(size_t *i, char const *s, char c)
 	return (0);
 }
 
-char			**ft_strsplit(const char *s, char c)
+char	**ft_strsplit(const char *s, char c)
 {
 	char	**tab;
 	size_t	o;
@@ -70,7 +70,7 @@ char			**ft_strsplit(const char *s, char c)
 	j = 0;
 	tab = NULL;
 	if (s)
-		tab = (char**)malloc(sizeof(char*) * (ft_nb_word(s, c) + 1));
+		tab = (char **)malloc(sizeof(char *) * (ft_nb_word(s, c) + 1));
 	if (tab)
 	{
 		while (j < ft_nb_word(s, c))
